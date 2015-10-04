@@ -1,0 +1,25 @@
+{
+    "name": "HoverDrake",
+    "description": "Play parts of Drake songs when hovering over certain words.",
+    "version": "0.1",
+    "permissions": [
+        "tabs","<all_urls>"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": ["jquery-latest.min.js", "content.js"],
+            "run_at": "document_end"        // pay attention to this line
+        }
+    ],
+
+    "web_accessible_resources": [
+        "./worst.mp3"
+    ],
+
+    "manifest_version":2
+}
